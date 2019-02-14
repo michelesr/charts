@@ -164,7 +164,7 @@ Specify each parameter using the `--set key=value[,key=value]` argument to `helm
 
 ```console
 $ helm install stable/kiam --name my-release \
-  --set=extraArgs.base-role-arn=arn:aws:iam::0123456789:role/,extraArgs.default-role=kube2iam-default,host.iptables=true,host.interface=cbr0
+  --set=server.roleBaseArn=arn:aws:iam::0123456789:role/,server.assumeRoleArn=arn:aws:iam::0123456789:role/kiam-server-role,agent.host.iptables=true,agent.host.interface=cbr0
 ```
 
 Alternatively, a YAML file that specifies the values for the above parameters can be provided while installing the chart. For example,
